@@ -44,7 +44,7 @@ def makeMatrix():
     print ()
     print ("Points",end=":")
     for point in resList:
-        print ("(",point[0]+1,",",point[1]+1,")",end="\t")
+        print ("(",point[0]+1,",",point[1]+1,")",end=" ")
     print ("\n")
     for i in range(n):
         #print ("|", end="\t")
