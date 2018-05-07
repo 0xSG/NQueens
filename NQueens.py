@@ -40,14 +40,22 @@ def makeMatrix():
         a[i] = [' x '] * n
     for i in resList:
         a[i[0]][i[1]]="(*)"
+
+    print ()
+    print ("Points",end=":")
+    for point in resList:
+        print ("(",point[0]+1,",",point[1]+1,")",end="\t")
+    print ("\n")
     for i in range(n):
+        #print ("|", end="\t")
         for j in range(n):
             print (a[i][j],end="\t")
-        print()
+        print ()
+
 
 if(findQP(n)):
 
-    print (resList)
+    #print (resList)
     makeMatrix()
 
 else:
