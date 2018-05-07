@@ -1,5 +1,5 @@
 
-n = input("Enter the no of queens:")
+n = int(input("Enter the no of queens:"))
 board =[[],[],[],[]]
 resList=[]
 def findQP(count):
@@ -33,17 +33,23 @@ def findQP(count):
     else:
         return 0
 
+
+def makeMatrix():
+    a = [0] * n
+    for i in range(n):
+        a[i] = [' x '] * n
+    for i in resList:
+        a[i[0]][i[1]]="(*)"
+    for i in range(n):
+        for j in range(n):
+            print (a[i][j],end="\t")
+        print()
+
 if(findQP(n)):
+
     print (resList)
+    makeMatrix()
 
 else:
     print ("No")
-
-
-
-
-
-
-
-
-
+    
